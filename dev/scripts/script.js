@@ -17,3 +17,12 @@ function removeTransition(e) {
     $(".site-header__nav").removeClass("expanded");
   }
 }
+
+$(".hero-banner").slick({
+  dots: true,
+  arrows: true,
+  fade: true,
+  cssEase: "linear",
+  prevArrow: '<i class="slick-prev fa-solid fa-chevron-left"></i>',
+  nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
+});

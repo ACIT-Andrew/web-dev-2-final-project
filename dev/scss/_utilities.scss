@@ -2,3 +2,9 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+/* set element off screen */
+.offscreen {
+  position: absolute;
+  left: -999999px;
+}
