@@ -27,20 +27,10 @@
     p {
       font-size: clamp(1.1rem, 3.5vw, 3rem);
       font-weight: 300;
-      line-height: 1;
+      line-height: 1.2;
     }
     button {
       margin-top: 2rem;
-      padding: 1rem;
-      border-radius: 5px;
-      background-color: $brand-color;
-      color: $secondary-color;
-      border: none;
-      cursor: pointer;
-      &:hover {
-        $brand-color: #f27100;
-        background-color: $brand-color;
-      }
     }
   }
 }
