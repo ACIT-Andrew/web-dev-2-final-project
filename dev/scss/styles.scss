@@ -1,1 +1,9 @@
 @use 'normalize';
+@use 'slick-theme';
+@use 'slick';
+@use 'variables' as *;
+
+.testing-slide {
+    width: 50%;
+    margin: 0 auto;
+}
