@@ -15,11 +15,11 @@ footer {
     li {
       padding-bottom: 1rem;
     }
-    @media (min-width: 21.25em) {
+    @media (min-width: 22.5em) {
       @include setEvenGrid(2);
       margin: 1rem;
     }
-    @media (min-width: 31.25em) {
+    @media (min-width: 33.5em) {
       @include setEvenGrid(4);
       margin: 1rem;
       margin-left: 5%;

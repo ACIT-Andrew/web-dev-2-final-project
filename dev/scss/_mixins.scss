@@ -3,6 +3,7 @@
 @mixin setFont($weight, $family:$font-family){
     font-weight: $weight;
     font-family: $family;
+    font-size: 1rem;
 }
 
 @mixin setEvenGrid($columns){
