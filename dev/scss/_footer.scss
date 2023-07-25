@@ -1,5 +1,18 @@
 @use 'variables' as * ;
 
+$footer-text-grey: #666;
+
 footer{
     background-color: $footer-background;
+    color: $footer-text-grey;
+    margin: 0;
+    padding: 2rem 1rem;
+
+    > ul{
+        list-style: none;
+        li{
+            padding-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+    }
 }
