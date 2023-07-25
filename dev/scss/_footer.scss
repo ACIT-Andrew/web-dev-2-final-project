@@ -1,18 +1,28 @@
-@use 'variables' as * ;
+@use "variables" as *;
+@use "mixins" as *;
 
 $footer-text-grey: #666;
 
-footer{
-    background-color: $footer-background;
-    color: $footer-text-grey;
-    margin: 0;
-    padding: 2rem 1rem;
+footer {
+  background-color: $footer-background;
+  @include setFont(500);
+  color: $footer-text-grey;
+  margin: 0;
+  padding: 2rem 1rem;
 
-    > ul{
-        list-style: none;
-        li{
-            padding-bottom: 1rem;
-            font-size: 1.2rem;
-        }
+  > ul {
+    list-style: none;
+    li {
+      padding-bottom: 1rem;
     }
+    @media (min-width: 21.25em) {
+      @include setEvenGrid(2);
+      margin: 1rem;
+    }
+    @media (min-width: 31.25em) {
+      @include setEvenGrid(4);
+      margin: 1rem;
+      margin-left: 5%;
+    }
+  }
 }

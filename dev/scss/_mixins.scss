@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+@mixin setFont($weight, $family:$font-family){
+    font-weight: $weight;
+    font-family: $family;
+}
+
+@mixin setEvenGrid($columns){
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
