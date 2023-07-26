@@ -22,3 +22,8 @@
   align-items: $alignItems;
   justify-content: $justifyContent;
 }
+
+@mixin makeSquare($size){
+  height: $size;
+  width: $size;
+}

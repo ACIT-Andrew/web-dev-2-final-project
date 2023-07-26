@@ -14,20 +14,46 @@ footer {
     padding: 1rem;
     border-bottom: 1px solid black;
     background-color: $secondary-color;
+    // Jump to top button
     div.to-top {
-      @include setFont(600, $brand-color);
-      margin: 1rem;
+      a{
+        @include setFont(600, $brand-color);
+      }
+      margin: 2rem 1rem;
       margin-left: 5%;
     }
     div.social-media-links {
       @include setFlex(column, start);
-      margin: 1rem;
+      gap: 1rem;
+      margin: 2rem 1rem;
+      .icons {
+        @include setFlex();
+        gap: 1rem;
+        .circle {
+          background-color: $header-background;
+          border-radius: 50%;
+          @include makeSquare(45px);
+          i {
+            color: $secondary-color;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            bottom: -30%;
+          }
+        }
+      }
       & .email {
-        @include setFont(500, $footer-text-grey);
+        svg{
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+        a{
+          @include setFont(500, $footer-text-grey);
+          text-transform: uppercase;
+        }
       }
       @media (min-width: 38em) {
         @include setFlex(row);
-        margin: 1rem;
         margin-left: 5%;
       }
     }
