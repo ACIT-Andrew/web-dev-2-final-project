@@ -86,10 +86,27 @@
         </div>
       </section>
       <section class="audio-engine-video">
-        <div class="video-container">
+        <div class="thumbnail-container">
           <h2>This Is Audio Engine</h2>
-          <button class="play-button"><i class="fa-solid fa-play"></i></button>
+          <button class="play-button" id="play-button">
+            <i class="fa-solid fa-play"></i>
+          </button>
           <img src="images/bg-this-is-audio-engine-section.jpg" alt="" />
+        </div>
+      </section>
+      <section class="video-pop-up" id="video-pop-up">
+        <div class="video-wrapper">
+          <div class="close-button-wrapper">
+            <button class="close-button" id="close-button">Close</button>
+          </div>
+          <video
+            class="this-is-audio-engine"
+            id="this-is-audio-engine"
+            controls
+          >
+            <source src="media/this-is-audioengine.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
     </main>
