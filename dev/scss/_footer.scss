@@ -1,6 +1,5 @@
 @use "variables" as *;
 @use "mixins" as *;
-@use "in-the-news";
 
 $footer-text-grey: #666;
 
@@ -10,52 +9,6 @@ footer {
   margin: 0;
   padding: 2rem 0;
   width: 100%;
-
-  section.audio-engine-video {
-    width: 100%;
-    .video-container {
-      position: relative;
-      width: 100%;
-      font-size: 3rem;
-      h2 {
-        @include setFont(600);
-        font-size: 0.6em;
-        text-transform: uppercase;
-        text-shadow: 1px 1px 0 #d7dbde;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 10%;
-        @media (min-width: 35.6em) {
-          font-size: 0.8em;
-        }
-      }
-      button.play-button {
-        border: none;
-        background-color: transparent;
-        width: fit-content;
-        height: unset;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 40%;
-        i.fa-play {
-          color: $brand-color;
-          width: 100%;
-          font-size: 120%;
-          @media (min-width: 32em) {
-            font-size: 140%;
-          }
-        }
-      }
-      img {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  }
 
   section.social-media {
     padding: 1rem;
