@@ -12,6 +12,14 @@
   text-transform: uppercase;
   padding: 0.7rem 1.5rem;
   border: 1px solid $border-color;
+
+}
+@mixin circle-shape {
+    border-radius: 50%;
+}
+
+@mixin uppercase {
+    text-transform: uppercase;
 }
 
 @mixin overlay (
