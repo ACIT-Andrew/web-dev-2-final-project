@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "typography" as *;
+
+.in-the-news {
+  width: 100%;
+  padding: 4rem 0;
+  @include setFlex(column);
+  h2 {
+    @include setFont(200);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    // @media (min-width: 33.3em) {
+    //   display: inline-block;
+    // }
+  }
+  .images {
+    @include setFlex(column);
+    gap: 5rem;
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+    @media (min-width: 33.3em) {
+      @include setFlex();
+      overflow: hidden;
+    }
+  }
+}

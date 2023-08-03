@@ -23,7 +23,7 @@
   justify-content: $justifyContent;
 }
 
-@mixin makeSquare($size){
+@mixin makeSquare($size) {
   height: $size;
   width: $size;
 }

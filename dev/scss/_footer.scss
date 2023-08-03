@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
+@use "in-the-news";
 
 $footer-text-grey: #666;
 
@@ -16,7 +17,7 @@ footer {
     background-color: $secondary-color;
     // Jump to top button
     div.to-top {
-      a{
+      a {
         @include setFont(600, $brand-color);
       }
       margin: 2rem 1rem;
@@ -43,11 +44,11 @@ footer {
         }
       }
       & .email {
-        svg{
+        svg {
           margin-right: 5px;
           vertical-align: middle;
         }
-        a{
+        a {
           @include setFont(500, $footer-text-grey);
           text-transform: uppercase;
         }
