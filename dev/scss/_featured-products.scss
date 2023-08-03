@@ -1,2 +1,47 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+
+
+.featured-all-new {
+    position: relative;
+    .text-and-button {
+        position: absolute;
+        top: 8%;
+        left: 8%;
+        z-index: 3;
+        @media (min-width: 31.25rem) {
+            top: 28%;
+            left: 58%;
+        }
+        h2 {
+            color: $secondary-color;
+            text-transform: uppercase;
+        }        
+        p {
+            color: $secondary-color;
+        }
+        button {
+            @include button-customizable ($color: $secondary-color, $text-color: rgba(128, 128, 128, 0.94));
+            margin-top: 1rem;
+        }
+        
+    }
+    picture::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            @media (min-width: 31.25rem) {
+                top: 23%;
+                right: 0;
+                width: 46%;
+                height: 48%;
+                left: auto;
+            }
+        }
+
+}
