@@ -1,6 +1,10 @@
 @use 'variables' as *;
 @use 'mixins' as *;
-
+h2 {
+    @include uppercase;
+    text-align: center;
+    font-weight: 200;
+}
 .shop-by-room-or-service {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -29,7 +33,7 @@
             position: absolute;
             z-index: 2;
             color: $secondary-color;
-            text-transform: uppercase;
+            @include uppercase;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -50,6 +54,9 @@
         justify-content: space-between;
         .image-container {
             margin: 0 1rem;
+            p {
+                font-size: 1.5rem;
+            }
         }
     }
 }

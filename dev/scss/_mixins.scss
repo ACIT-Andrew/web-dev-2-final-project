@@ -3,3 +3,7 @@
 @mixin circle-shape {
     border-radius: 50%;
 }
+
+@mixin uppercase {
+    text-transform: uppercase;
+}

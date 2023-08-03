@@ -2,7 +2,5 @@
 @use 'mixins' as *;
 
 body {
-    p {
-        font-family: $font-family;
-    }
+    font-family: $font-family;
 }
