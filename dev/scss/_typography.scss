@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body {
+    p {
+        font-family: $font-family;
+    }
+}

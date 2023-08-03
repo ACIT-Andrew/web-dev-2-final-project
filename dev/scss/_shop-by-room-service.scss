@@ -1,0 +1,45 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.shop-by-room-or-service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+    .image-container {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 2; 
+            @include circle-shape;
+        }
+        p {
+            position: absolute;
+            z-index: 2;
+            color: $secondary-color;
+            text-transform: uppercase;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 1.8rem;
+        }
+        img {
+            display: block;
+            @include circle-shape;
+            background-color: $header-background;
+            position: relative; 
+            z-index: 1;
+            
+        }
+    }
+    @media (min-width: $table-size) {
+        display: none;
+    }
+}

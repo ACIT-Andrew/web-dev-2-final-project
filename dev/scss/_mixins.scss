@@ -1,0 +1,5 @@
+@use 'variables' as *;
+
+@mixin circle-shape {
+    border-radius: 50%;
+}
