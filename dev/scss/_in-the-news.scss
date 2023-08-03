@@ -18,13 +18,30 @@
   .images {
     @include setFlex(column);
     gap: 5rem;
+    width: 100%;
+    height: 100%;
     img {
-      width: auto;
-      max-width: 100%;
+        width: auto;
+        max-width: 90%;
+        @media (min-width: 33.3em) {
+            width: 80%;
+        }
     }
+
+    .slick-track{
+        @include setFlex();
+        margin: 1rem;
+    }
+
     @media (min-width: 33.3em) {
-      @include setFlex();
-      overflow: hidden;
+        // @ 500px
+        @include setFlex();
+        gap:unset;
+        overflow: hidden;
+        & > div{
+            width: 80%;
+            margin: 0 auto;
+        }
     }
   }
 }
