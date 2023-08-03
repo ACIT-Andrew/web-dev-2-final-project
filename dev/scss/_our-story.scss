@@ -10,6 +10,7 @@
         text-align: center;
         transform: translate(-50%, -50%);
         width: 75%;
+        z-index: 3;
        
         h2 {
             text-transform: uppercase;
@@ -28,10 +29,10 @@
             cursor: pointer;
             margin-top: 1rem;
         }
-        picture{
-            &::before {
-                @include overlay;
-            }
+    }
+    picture{
+        &::before {
+            @include overlay;
         }
     }
 }
