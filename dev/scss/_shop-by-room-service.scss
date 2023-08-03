@@ -9,9 +9,19 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin: 1rem;
-    .slick-prev, 
+    margin: 1rem auto;
+    width: 80%;
+    .slick-prev {
+        left: -7%;
+        color: $brand-color;
+        &::before {
+            color: $brand-color;
+        }
+    }
+
     .slick-next {
+        right: -7%;
+        color: $brand-color;
         &::before {
             color: $brand-color;
         }
