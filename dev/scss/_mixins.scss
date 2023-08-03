@@ -1,5 +1,18 @@
 @use "variables" as *;
 
+@mixin button-customizable(
+  $color: $brand-color,
+  $radius: 0.3125rem,
+  $text-color: $secondary-color
+) {
+  background-color: $color;
+  border-radius: $radius;
+  color: $text-color;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid $text-color;
+}
+
 @mixin overlay($opacity: 0.3, $z-index: 2) {
   content: "";
   position: absolute;
