@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.our-story {
+    position: relative;
+    .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 75%;
+       
+        h2 {
+            text-transform: uppercase;
+            color: $secondary-color;
+            padding-bottom: 1rem;
+        }
+        p {
+            color: $secondary-color;
+            line-height: 1.2;
+            &:nth-of-type(2) {
+                font-style: italic;
+            }
+        }
+        button {
+            @include button-customizable ($border-color: rgba(128, 128, 128, 0.522));
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        picture{
+            &::before {
+                @include overlay;
+            }
+        }
+    }
+}
