@@ -27,6 +27,13 @@ $("#images-carousel").slick({
       },
     },
     {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
       breakpoint: 500,
       settings: "unslick",
     },
