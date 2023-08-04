@@ -52,9 +52,10 @@
         width: auto;
       }
     }
-    button {
+    a {
       width: fit-content;
       order: 1;
+      display: inline-block;
       @media (min-width: $tablet-size) {
         margin-top: 2rem;
         font-size: clamp(0.8rem, 2vw, 3rem);
