@@ -56,7 +56,7 @@ footer {
         }
       }
       @media (min-width: 38em) {
-        @include setFlex(row);
+        @include setFlex(row, end);
         margin-left: 5%;
       }
     }
