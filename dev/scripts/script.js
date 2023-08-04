@@ -19,11 +19,9 @@
 //   });
 // }
 
-$(window).on(
-    'resize', function(){
-        $("#images-carousel").slick('resize');
-    }
-)
+$(window).on("resize", function () {
+  $("#images-carousel").slick("resize");
+});
 
 $("#images-carousel").slick({
   arrows: true,
@@ -54,3 +52,16 @@ $("#images-carousel").slick({
     },
   ],
 });
+
+$("#play-button").on("click", () => {
+  $("#video-pop-up").show();
+  $("#video-pop-up video").get(0).currentTime = 0;
+  $('body').css("overflow-y", "hidden")
+});
+
+$("#close-button").on("click", () => {
+    $("#video-pop-up").hide();
+    $("#video-pop-up video").trigger("pause");
+    $('body').css("overflow-y", "visible")
+});
+
