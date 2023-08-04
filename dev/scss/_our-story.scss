@@ -35,7 +35,7 @@
                 font-style: italic;
             }
         }
-        button {
+        a {
             @include button-customizable ($border-color: rgba(128, 128, 128, 0.522));
             cursor: pointer;
             margin-top: 1rem;
