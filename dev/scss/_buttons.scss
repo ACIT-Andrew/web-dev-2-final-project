@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+.primary-button {
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  background-color: $brand-color;
+  color: $secondary-color;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    $brand-color: #f27100;
+    background-color: $brand-color;
+  }
+}

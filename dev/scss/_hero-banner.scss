@@ -1,0 +1,36 @@
+@use "variables" as *;
+.hero-banner {
+  &__slide {
+    position: relative;
+    img {
+      width: 100%;
+    }
+  }
+  &__info {
+    position: absolute;
+    right: 0;
+    top: 7%;
+    padding: 2rem;
+    background-color: #eaeaeac9;
+    color: #5b5b5b;
+    display: none;
+    // width: 45%;
+
+    @media (min-width: $small-screen-laptop) {
+      display: block;
+      width: 40%;
+    }
+    h2 {
+      font-size: clamp(1.3rem, 4.5vw, 3.5rem);
+      line-height: 1;
+    }
+    p {
+      font-size: clamp(1.1rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.2;
+    }
+    button {
+      margin-top: 2rem;
+    }
+  }
+}

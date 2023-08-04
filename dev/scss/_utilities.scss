@@ -1,0 +1,15 @@
+/* set text in all-uppercase */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* set element off screen */
+.offscreen {
+  position: absolute;
+  left: -999999px;
+}
+
+/* text nowrap */
+.nowrap {
+  white-space: nowrap;
+}
