@@ -63,28 +63,28 @@ footer {
   }
 
   .links {
-    padding: 1rem;
-    background: $footer-background;
-    a{
+    padding: 2rem;
+    background-color: $footer-background;
+    a {
       color: $footer-text-grey;
-      &:active{
+      &:active {
         color: #444;
       }
     }
     ul {
       list-style: none;
-      li {
-        padding-bottom: 1rem;
+      li{
+        line-height: 1.8;
       }
-      @media (min-width: 22.5em) {
-        @include setEvenGrid(2);
-        margin: 1rem;
-      }
-      @media (min-width: 33.5em) {
-        @include setEvenGrid(4);
-        margin: 1rem;
-        margin-left: 5%;
-      }
+    }
+    @media (min-width: 22.5em) {
+      @include setEvenGrid(2);
+      padding: 2rem;
+    }
+    @media (min-width: 33.5em) {
+      @include setEvenGrid(4);
+      padding: 4rem;
+      padding-left: 10%;
     }
   }
 }
