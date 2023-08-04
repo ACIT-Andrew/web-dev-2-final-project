@@ -1,0 +1,90 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+$footer-text-grey: #666;
+
+footer {
+  @include setFont(500);
+  color: $footer-text-grey;
+  margin: 0;
+  width: 100%;
+
+  section.social-media {
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    background-color: $secondary-color;
+    // Jump to top button
+    div.to-top {
+      a {
+        @include setFont(600, $brand-color);
+      }
+      margin: 2rem 1rem;
+      margin-left: 5%;
+    }
+    div.social-media-links {
+      @include setFlex(column, start);
+      gap: 1rem;
+      margin: 2rem 1rem;
+      .icons {
+        @include setFlex();
+        gap: 1rem;
+        .circle {
+          background-color: $header-background;
+          border-radius: 50%;
+          position: relative;
+          width: 100%;
+          @include makeSquare(45px);
+          i {
+            color: $secondary-color;
+            width: fit-content;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 50%;
+          }
+        }
+      }
+      & .email {
+        svg {
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+        a {
+          @include setFont(500, $footer-text-grey);
+          text-transform: uppercase;
+        }
+      }
+      @media (min-width: 38em) {
+        @include setFlex(row, end);
+        margin-left: 5%;
+      }
+    }
+  }
+
+  .links {
+    padding: 1rem;
+    background: $footer-background;
+    a{
+      color: $footer-text-grey;
+      &:active{
+        color: #444;
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-bottom: 1rem;
+      }
+      @media (min-width: 22.5em) {
+        @include setEvenGrid(2);
+        margin: 1rem;
+      }
+      @media (min-width: 33.5em) {
+        @include setEvenGrid(4);
+        margin: 1rem;
+        margin-left: 5%;
+      }
+    }
+  }
+}

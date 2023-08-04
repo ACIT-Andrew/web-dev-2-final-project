@@ -13,3 +13,16 @@
 @use "shop-by-room-service";
 @use "featured-products";
 @use "our-story";
+
+@use "footer";
+@use 'in-the-news';
+@use 'video-audio-engine';
+
+
+html {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
