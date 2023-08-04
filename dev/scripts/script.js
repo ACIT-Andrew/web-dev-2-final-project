@@ -1,4 +1,3 @@
-
 $(window).on("resize", function () {
   $("#images-carousel").slick("resize");
 });
@@ -43,17 +42,14 @@ $("#images-carousel").slick({
 $("#play-button").on("click", () => {
   $("#video-pop-up").show();
   $("#video-pop-up video").get(0).currentTime = 0;
-  $('body').css("overflow-y", "hidden")
+  $("body").css("overflow-y", "hidden");
 });
 
 $("#close-button").on("click", () => {
-    $("#video-pop-up").hide();
-    $("#video-pop-up video").trigger("pause");
-    $('body').css("overflow-y", "visible")
+  $("#video-pop-up").hide();
+  $("#video-pop-up video").trigger("pause");
+  $("body").css("overflow-y", "visible");
 });
-
-
-
 
 /* Hamburger menu toggle function */
 $(".hamburger-menu").on("click", () => {
@@ -82,38 +78,37 @@ $(".hero-banner").slick({
   nextArrow: '<i class="slick-next fa-solid fa-chevron-right"></i>',
 });
 
-$('.shop-by-room-or-service').slick({
-    infinite: true,
-    arrows: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    nextArrow: '<i class="fa-solid slick-next fa-chevron-right"></i>',
-    prevArrow: '<i class="fa-solid slick-prev fa-chevron-left"></i>',
-    responsive: [
-        {
-            breakpoint: 1325,
-            settings: {
-                slidesToShow: 4      
-            }
-        },
-        {
-            breakpoint: 826,
-            settings: {
-                slidesToShow: 3
-            }
-        },
-        {
-            breakpoint: 450,
-            // setting the settings property
-            // to 'unslick' to destroy the slideshow
-            settings: 'unslick'
-        }
-    ]
-}
-);
+$(".shop-by-room-or-service").slick({
+  infinite: true,
+  arrows: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  nextArrow: '<i class="fa-solid slick-next fa-chevron-right"></i>',
+  prevArrow: '<i class="fa-solid slick-prev fa-chevron-left"></i>',
+  responsive: [
+    {
+      breakpoint: 1325,
+      settings: {
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 826,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 450,
+      // setting the settings property
+      // to 'unslick' to destroy the slideshow
+      settings: "unslick",
+    },
+  ],
+});
 
 // fix the bug from slick whenever resize the screen from the breakpoint 'unslick'
 
-$(window).on('resize', function () {
-    $('.shop-by-room-or-service').slick('resize');
-} );
+$(window).on("resize", function () {
+  $(".shop-by-room-or-service").slick("resize");
+});
