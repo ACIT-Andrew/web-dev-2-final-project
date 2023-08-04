@@ -15,9 +15,8 @@
 @use "our-story";
 
 @use "footer";
-@use 'in-the-news';
-@use 'video-audio-engine';
-
+@use "in-the-news";
+@use "video-audio-engine";
 
 html {
   font-size: 16px;
@@ -25,4 +24,19 @@ html {
 
 a {
   text-decoration: none;
+}
+
+.wrapper {
+  background-color: white;
+}
+
+@media (min-width: 88.75em) {
+  .wrapper {
+    width: 90rem;
+    // max-width: 90vw;
+    margin: 0 auto;
+  }
+  body {
+    background-color: #303030;
+  }
 }
