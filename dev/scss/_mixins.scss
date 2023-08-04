@@ -28,17 +28,19 @@
   width: $size;
 }
 
-@mixin button-customizable(
+@mixin button-style-customizable(
   $color: $brand-color,
   $radius: 0.3125rem,
   $text-color: $secondary-color,
-  $border-color: $secondary-color
+  $border-color: $secondary-color,
+  $padding-tb: 0.3rem,
+  $padding-lr: 1.3rem,
 ) {
   background-color: $color;
   border-radius: $radius;
   color: $text-color;
   text-transform: uppercase;
-  padding: 0.5rem 1.3rem;
+  padding: $padding-tb $padding-lr;
   border: 1px solid $border-color;
 
 }
