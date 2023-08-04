@@ -1,0 +1,71 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+h2 {
+    @include uppercase;
+    text-align: center;
+    font-weight: 200;
+}
+.shop-by-room-or-service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem auto;
+    width: 80%;
+    .slick-prev {
+        left: -7%;
+    }
+    .slick-next {
+        right: -7%;
+    }
+    .image-container {
+        position: relative;
+        @include circle-shape;      
+        &::before {
+            @include overlay;
+            @include circle-shape;
+        }
+        p {
+            position: absolute;
+            z-index: 2;
+            color: $secondary-color;
+            @include uppercase;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 1.3rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include circle-shape;
+            @media (min-width: $tablet-size) {
+                font-size: 1.1rem;
+            }
+            @media (min-width: 40.625rem) {
+                font-size: 1.5rem;
+            }
+            @media (min-width: 71.625rem) {
+                font-size: 1.8rem;
+            }
+        }
+        img {
+            display: block;
+            @include circle-shape;
+            background-color: $header-background;
+            position: relative; 
+            z-index: 1;
+            
+        }
+        @media (min-width: $tablet-size) {
+            margin: 0 1rem;
+        }
+    }
+    @media (min-width: $tablet-size) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
