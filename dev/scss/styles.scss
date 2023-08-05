@@ -26,17 +26,30 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  background-color: white;
-}
+// .wrapper {
+//   background-color: white;
+// }
+
+// @media (min-width: 88.75em) {
+//   .wrapper {
+//     width: 90rem;
+//     // max-width: 90vw;
+//     margin: 0 auto;
+//   }
+//   body {
+//     background-color: #303030;
+//   }
+// }
 
 @media (min-width: 88.75em) {
-  .wrapper {
-    width: 90rem;
-    // max-width: 90vw;
-    margin: 0 auto;
-  }
   body {
+    display: grid;
     background-color: #303030;
+    grid-template-columns: 1fr 88.75rem 1fr;
+  }
+
+  .wrapper {
+    grid-column: 2 / 3;
+    background-color: white;
   }
 }
